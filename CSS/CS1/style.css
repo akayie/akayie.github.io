@@ -1,0 +1,77 @@
+h1{
+    color:red;
+    text-align: center;
+}
+/* grid */
+.gridone div{
+    padding: 20px,
+    color: white;
+    text-align: center;
+}
+.gridone{
+    display:grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.gridtwo{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap:20px;
+    grid-column-gap:50px;
+    /* grid-gap:20px; */
+}
+
+.gridthree, .gridfour{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.rowadd{
+    grid-row-start:1;
+    grid-row-end:3;
+}
+
+.columnadd{
+    grid-column-start: 1;
+    grid-column-end:3;
+}
+
+/* positon */
+
+.relative_parent{
+    border:2px solid red;
+    width:1000px;
+    height:600px;
+}
+
+.position_relative{
+    border: 2px solid green;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+.position_absolute{
+    border: 2px solid rgb(252, 248, 33);
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 1000px;
+    right: 100px;
+}
+
+.fixed{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+
+}
+
+/* Font */
+.online_font:{
+    font-family:'Lemon', serif;
+    font-size=30px;
+}
