@@ -407,6 +407,9 @@
 .newpage_bgcolorS{
     background-color: rgb(251, 251, 250);
 }
+.new_bg{
+    background-color: rgb(125, 227, 231);
+}
 /* end news page */
 /* start register page */
 
@@ -489,3 +492,12 @@
 }
 
 /* end contact page */
+
+/* start Blog */
+.blog_img:hover{
+    transform: scale(1.2);
+    transition-duration: 8s;
+}
+.blog_hover{
+    overflow: hidden;
+}
