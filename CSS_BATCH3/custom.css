@@ -1,6 +1,11 @@
 
 h1{
-    color: red;
+    /* color */
+
+    /* #0->9a->f */
+
+    /* rgb 1->255 */
+    color: rgb(239, 20, 20);
     text-align: center;
 }
 p{
@@ -9,5 +14,6 @@ p{
     font-size: 20px;
     word-spacing: 20px;
     line-height: 30px;
-    
+    width:100%;
+    background-color: blue;
 }
