@@ -27,3 +27,48 @@ a[title="google"]{
     line-height: 40px;
 
 }
+/* descedent selector */
+div p{
+    background-color: yellow;
+}
+
+/* child selector */
+div>p {
+    color: black;
+}
+
+span>p {
+    color: green;
+}
+
+/* Pseudo Selector */
+h1 a:hover{
+    color: black;
+    font-size: 50px;
+    background-color: red;
+}
+
+h2 a:link {
+    color: green;
+}
+
+h2 a:hover{
+    color: yellow;
+}
+
+h2 a:visited {
+    color: brown;
+}
+
+h2 a:active {
+    color: yellow;
+}
+
+
+/* target */
+:target{
+    color: red;
+    border: 10px dotted black;
+    line-height: 30px;
+    letter-spacing: 20px;
+}
