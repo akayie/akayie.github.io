@@ -6,7 +6,7 @@
 /* tag or element selector */
 h1{
     text-align: center;
-    color: green;
+    color: red;
 }
 
 /* attribute selector */
@@ -27,7 +27,7 @@ a[title="google"]{
     line-height: 40px;
 
 }
-/* descedent selector */
+descedent selector
 div p{
     background-color: yellow;
 }
@@ -71,4 +71,118 @@ h2 a:active {
     border: 10px dotted black;
     line-height: 30px;
     letter-spacing: 20px;
+}
+
+
+
+
+/* layout */
+
+.inline{
+    border: 2px solid red;
+    display:inline-block;
+    width: 400px;
+}
+
+/* block */
+.block{
+    border: 2px solid green;
+    width: 400px;
+    display: inline-block;
+}
+
+/* Float */
+.float_right{
+    width: 40%;
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.float_left{
+    width: 40%;
+    float: left;
+}
+
+/* grid */
+.gridone div, .gridTwo div,.gridThree div,.gridFour div,.gridFive div{
+    padding:20px;
+    color:white;
+    text-align: center;
+}
+
+.gridone,.gridTwo,.gridThree,.gridFour,.gridFive{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.gridTwo{
+    grid-column-gap: 40px;
+}
+
+.gridThree{
+    grid-row-gap: 40px;
+}
+
+.columnadd{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.rowadd{
+    grid-row-start: 1;
+    grid-row-end:3;
+}
+
+/* Position */
+.parent_absolute{
+    width: 1200px;
+    height: 500px;
+    border:1px solid red;
+}
+
+.absolute{
+    width: 400px;
+    height: 200px;
+    border: 2px solid green;
+    position: absolute;
+    top: 10px;
+    left: 150px;
+}
+
+.parent_relative{
+    width: 1200px;
+    height: 500px;
+    border:1px solid yellow;
+}
+
+.relative{
+    width: 400px;
+    height: 200px;
+    border: 2px solid brown;
+    position:relative;
+    top: 10px;
+    left: 150px;
+}
+
+.fixed{
+    position: fixed;
+    top: 50px;
+    right:100px;
+}
+
+.online{
+        font-family: "Playwrite CL", cursive;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+}
+
+@font-face {
+    font-family: playwrite;    
+    src:url(PlaywriteCL-VariableFont_wght.ttf)}
+.offline{
+    font-family:playwrite ;
 }
