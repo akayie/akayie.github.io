@@ -84,33 +84,132 @@
 /* end bunner */
 
 /* start support */
-.support{
-    margin-top: 50px;
-    margin-left: 150px;
+.service{
+   margin: 50px 150px 0px;
+   grid-column-gap:30px;
     display: grid;
     grid-template-columns:auto auto auto auto ;
 }
-.support div{
-    border: 1px solid rgba(220, 215, 215, 0.832);
-    margin: 0px 20px;
-    padding: 25px;
+.service div{
+    border: 1px solid gray;
     border-radius: 5px;
+    padding:25px;
 }
-.support p{
+.service_text{
     display: inline-block;
     margin-left: 20px;
 }
-.support_one{
+.service_title{
     font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
-.support_two{
+
+.service_desc{
     color: gray;
-    display: inline-block;
-    padding: 10px;
-}
-.support_two{
-    color: gray;
-    padding: 10px;
-    display: inline-block;
 }
 /* end support */
+
+/* start promotion */
+.promotion_title{
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.divided{
+    width:80px;
+    border:1px solid red;
+    margin-left: 150px;
+}
+
+.promotion{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 15px 150px;
+    grid-column-gap: 30px;
+}
+
+.promotion_item{
+    border: 1px solid gray;
+    border-radius: 5px;
+    position: relative;
+}
+
+.promotion_image{
+    width: 100%;
+}
+.promotion_item_name{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.promotion_price{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.discount_price{
+    color: red;
+    display: block;
+}
+
+.normal_price{
+    color: red;
+    text-decoration: line-through;
+}
+/* end promotion */
+
+/* start new arrival */
+.new_arrival{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 15px 150px;
+    grid-column-gap: 30px;
+}
+
+.new_arrival_item{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0px 20px 10px;
+    position: relative;
+}
+
+.new_arrival_text{
+    display: inline-block;
+}
+.whist_list{
+    float: right;
+}
+.new_arrival_img{
+    width:100%;
+}
+
+.new_arrival_icon{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    opacity: 0;
+}
+
+.new_arrival_icon a{
+    border: 1px solid red;
+    background-color: rgb(233,223,223);
+    color: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+.new_arrival_icon a:hover{
+    background-color: red;
+    color: white;
+}
+
+.new_arrival_item:hover .new_arrival_icon{
+    opacity: 1;
+
+}
+/* end new arrival */
+/* start subcriber */
+.subscribe{
+    
+}
