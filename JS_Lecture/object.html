@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <script>
+        //object
+        let carParkingLists ={
+                something1 : "value1",
+                something2 : "value2",
+        }
+        let hotel = {
+            name :"Lottle Hotel",
+            rooms :50,
+            booked: 25,
+            gym : true,
+            roomType : ['Twin , Double , Family'],
+            checkRoom : function(){
+                return this.room -this.booked;
+            },
+            carParking : carParkingLists
+        }
+        
+
+        //let hotelArrayLists = {
+        //    {
+        //        name :"Lottle Hotel",
+        //        rooms : 50,
+        //        booked : 25 ,
+        //        Gym : true,
+        //        romType : ('Twin , Double , Family'),
+        //    },
+        //      {
+        //        name :"Yankin Hotel",
+        //        rooms : 50,
+        //        booked : 25 ,
+        //        Gym : true,
+        //        romType : ('Twin , Double , Family'),
+        //         //}
+
+        document.write(`Hotel Name is ${hotel.carParking}`);
+        let result = hotel.checkRoom();
+        console.log(hotel.carParking.something1);
+    </script>
+</body>
+</html>
