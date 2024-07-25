@@ -9,19 +9,19 @@
     <h1>Guess Game</h1>
     <script>
         let secretNo = 7 ; 
-       let count=0;
+       let count=0; 
         let userNo = prompt ("Guess a Number between 1 to 20");
-        while (secretNo != userNo){
+        while (userNo != secretNo)
+        {
         if ( userNo > secretNo){
-            document .write("Your number is greater than the secret number. No, Please try again");
-        }else {document.write ("Your number is lower than the secret number. No, Please try again");
-
-        userNo = prompt ("Guess a Number between 1 to 20");
-
-        }         count++;
-
+            alert("Your number is greater than the secret number. No, Please try again ");
+     }
+       else{ alert ("Your number is lower than the secret number. No, Please try again "); 
+    } 
+       count++;
+     userNo = prompt ("Guess a Number between 1 to 20");
     }
-    document.write(`Win, Your correct time is ${count}`)
+    document.write(`Win, Your correct time is ${count}`);
 
     </script>
 </body>
