@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="text-align: center;color: red;">Student Register</h1>
+    <h1 style="text-align: center;color: red;">Daily Shopping Register</h1>
 
     <form action="" name="myForm" id="total">
         <label for="date">Date</label>
@@ -16,7 +16,7 @@
         <label for="price">Price</label>
         <input type="number" name="price"><br>
         
-        <button type="button" onclick="showData()">Register</button>
+        <button type="button"  onclick="showData(),getData()">Register</button>
     </form>
 
     <h1>Student List</h1>
@@ -30,7 +30,7 @@
             </tr>
         </thead>
         <tbody id="myBody">
-           
+
         </tbody>
     </table>
 
@@ -41,10 +41,7 @@
             let date = document.myForm.date.value;
             let name = document.myForm.name.value;
             let price = document.myForm.price.value;
-            let total=document.myForm.total.value;
-            //console.log(name,age,address);
-
-        //create student object
+        
         let list ={
             shopping_date:date,
             item_name :name,
@@ -52,7 +49,6 @@
           total_price:total,
             
         }
-        //console.log(student);
 
         //array  push data
        shoppingArray.push(list) ;
@@ -64,35 +60,39 @@
     }
         function getData(){
         let html='';
+        let total_price=0;
         for(let i=0;i<shoppingArray.length; i++) {
-            //console.log(studebtArray[i]);
+         
             let shoppingObj = shoppingArray[i];
-
+              
             html +=`
+             
             <tr>
                 <td>${i+1}</td>
                 <td>${shoppingObj.shopping_date}</td>
                 <td>${shoppingObj.item_name}</td>
-            </tr>
-            <tr>
-                <td>${shoppingObj.total_price}</td>
+                <td>${shoppingObj.item_price}</td>
                 </tr>`;
 
 
-        }
-        document.getElementById('myBody').innerHTML= html;
 
+        
+    
+
+        document.getElementById('myBody').innerHTML= html;
+     
+        if (i<1)total_price=0;
+
+        
+        total_price += parseInt(`${shoppingObj.item_price}`);
+  
+        }  html += `<tr>
+						<td colspan=3 text-align="center">Total</td> 
+						<td>${total_price}</td>
+					 </tr>`; 
+			
+        document.getElementById('myBody').innerHTML = html;
     }
-    // function getData(){
-    //     let total='';
-    //     for(let j=0;j<shoppingArray.length;j++){
-    //         let shoppingObj=shoppingArray[j];
-    //         total +=`<tr>
-    //             <td>${shoppingObj.item_total_price}</td>
-    //             </tr>`;
-    //     }
-    //     document.getElementById('total_p').innerHTML=total;
-    // }
 
     </script>
 </body>
