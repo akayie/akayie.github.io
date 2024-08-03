@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;color: red;">Daily Shopping Register</h1>
+
+    <form action="" name="myForm" id="total">
+        <label for="date">Date</label>
+        <input type="date" id="date"><br>
+        <label for="name">Name</label>
+        <input type="text" id="name"><br>
+        <label for="price">Price</label>
+        <input type="number" name="price"><br>
+        
+        <button type="button"  onclick="showData(),getData()">Register</button>
+    </form>
+
+    <h1>Student List</h1>
+    <table border="1" cellpadding="30" cellspacing="0">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="myBody">
+
+        </tbody>
+    </table>
+
+    <script>
+        var shoppingArray =[];
+        function showData(){
+            //get function data
+            let date = document.myForm.date.value;
+            let name = document.myForm.name.value;
+            let price = document.myForm.price.value;
+        
+        let list ={
+            shopping_date:date,
+            item_name :name,
+            item_price : price,
+          total_price:total,
+            
+        }
+
+        //array  push data
+       shoppingArray.push(list) ;
+        console.log(shoppingArray);
+        
+
+        //show Table Data
+        getData();
+    }
+        function getData(){
+        let html='';
+        let total_price=0;
+        for(let i=0;i<shoppingArray.length; i++) {
+         
+            let shoppingObj = shoppingArray[i];
+              
+            html +=`
+             
+            <tr>
+                <td>${i+1}</td>
+                <td>${shoppingObj.shopping_date}</td>
+                <td>${shoppingObj.item_name}</td>
+                <td>${shoppingObj.item_price}</td>
+                </tr>`;
+
+
+
+        
+    
+
+        document.getElementById('myBody').innerHTML= html;
+     
+        if (i<1)total_price=0;
+
+        
+        total_price += parseInt(`${shoppingObj.item_price}`);
+  
+        }  html += `<tr>
+						<td colspan=3 text-align="center">Total</td> 
+						<td>${total_price}</td>
+					 </tr>`; 
+			
+        document.getElementById('myBody').innerHTML = html;
+    }
+
+    </script>
+</body>
+</html>
