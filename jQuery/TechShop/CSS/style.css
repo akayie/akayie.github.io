@@ -36,6 +36,8 @@
 
 .cart_nav_item{
     margin-right: 100px;
+    background-color: blue;
+    padding: 7px;
 }
 
 .cart_noti{
