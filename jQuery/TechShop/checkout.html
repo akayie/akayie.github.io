@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Shop</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+</head>
+<body>
+    <!-- start nav -->
+     <nav class="nav">
+        <h1>IT Shop</h1>
+        <ul class="nav_item">
+          <li><a href="index.html">Home</a></li>
+            <li ><a href="index.html" class="cart_nav_item"><i class="fa-solid fa-cart-shopping fa-xl"></i>
+            </a>
+            <span class="cart_noti">0</span>
+        </li>
+        </ul>
+     </nav><br><br><br>
+     <!-- end nav -->
+
+     <h1 style="text-align: center;">Shops</h1>
+     <table border="1" cellpadding="25" cellspacing="0">
+         <thead>
+             <tr>
+                 <th>#</th>
+                 <th>Item Name</th>
+                 <th>Item Price</th>
+                 <th>Qty</th>
+                 <th>Amount</th>
+             </tr>
+         </thead>
+         <tbody id="tbody">
+ 
+         </tbody>
+     </table>
+    <br>
+    <button class="button" id="order_now">Order Now</button>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -13,9 +13,9 @@
         <h1>IT Shop</h1>
         <ul class="nav_item">
           <li><a href="index.html">Home</a></li>
-            <li ><a href="index.html" class="cart_nav_item"><i class="fa-solid fa-cart-shopping fa-xl"></i>
+            <li ><a href="checkout.html" class="cart_nav_item"><i class="fa-solid fa-cart-shopping fa-xl"></i>
             </a>
-            <span class="cart_noti">0</span>
+            <span class="cart_noti"  id="count_item">0</span>
         </li>
         </ul>
      </nav><br><br><br>
@@ -27,7 +27,7 @@
       <h3>Laptop 1</h3>
       <h4>price:2300000</h4>
       <br>
-      <a href="">Add to Card</a></div>
+      <a  class="addToCart" data-id="1" data-name="Laptop 1" data-price="2300000">Add to Card</a></div>
      </div>
      
      <div class="image">
@@ -35,7 +35,7 @@
       <h3>Laptop 2</h3>
       <h4>price:200000</h4>
       <br>
-      <a href="">Add to Card</a>
+      <a  class="addToCart" data-id="2" data-name="Laptop 2" data-price="2000000">Add to Card</a>
      </div>
      <div class="image">
       <img src="Images/lap3.avif">
@@ -81,6 +81,9 @@
      </div>
 
     </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
