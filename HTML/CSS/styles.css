@@ -1,0 +1,503 @@
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto/Roboto-Regular.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+
+/* start nav */
+
+.nav{
+    /* background-color: red; */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, .1);
+    
+}
+
+.nav_logo{
+    width: 160px;
+    height: 90px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.nav_bar{
+    display:inline-block;
+
+}
+
+.nav_item{
+    float: right;
+
+}
+
+.nav_item li{
+    display: inline-block;
+    padding-right: 50px;
+    padding-top: 40px;
+
+}
+
+.nav_item li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_item li:last-child{
+    margin-right: 120px;
+}
+
+.nav_item_hover a:hover{
+    color:red;
+}
+
+.cart_noti{
+    position: relative;
+    top: -17px;
+    left: -8px;
+    background-color: red;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+/* end nav */
+
+/* start bunner */
+.bunner_image{
+    width: 100%;
+
+
+}
+
+.carousel_text{
+    position:absolute;
+    top: 300px;
+    left: 200px;
+    background-color:rgba(0, 0, 0, .2);
+    padding: 40px;
+    color:white;
+}
+
+.carousel_text h2{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.carousel_text button{
+    margin-top: 20px;
+    padding:10px 20px;
+    border-radius:  5px;
+    outline: none;
+    background-color: red;
+    color:white;
+    border: 1px solid red;
+    font-size: 16px;
+
+}
+
+.carousel_text button:hover{
+    background-color: red;
+    color: white;
+}
+
+/* end bunner */
+
+/* start service */
+.service{
+    margin-top: 50px;
+    margin-left: 150px;
+    display: grid;
+    grid-template-columns:auto auto auto auto ;
+}
+.service div{
+    border: 1px solid rgba(220, 215, 215, 0.832);
+    margin: 0px 20px;
+    padding: 25px;
+    border-radius: 5px;
+
+}
+.service_text{
+    display: inline-block;
+    margin-left: 20px;
+}
+.service_title{
+    font-weight:bold;
+}
+.service_des{
+    color:grey;
+    padding-top: 10px;
+    display: inline-block
+}
+/* end service */
+
+/* start promotion */
+.title{
+    margin-left: 170px;
+    margin-top: 50px;
+}
+.divided{
+    width: 80px;
+    margin-left: 170px;
+    border: 2px solid red;
+}
+.promotion{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 20px 150px 0px;
+}
+.promotion div{
+    border: 1px solid rgb(204, 204, 204);
+    margin: 0px 20px;
+}
+.promotion_image{
+    width:100%;
+    
+}
+.promotion_name{
+    text-align: center;
+}
+.promotion_item{
+    position: relative;
+    padding-bottom: 15px;
+}
+.promotion_price{
+    position:absolute;
+    top: 2%;
+    right: 2%;
+}
+.discount_price{
+    background-color: red;
+    color:white;
+    border-radius: 15px;
+    padding: 1px;
+}
+.normal_price{
+    text-decoration: line-through;
+    color:red;
+    font-size: 14px;
+}
+
+/* end promotion */
+
+/* start new arrival */
+.new_arrival{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 20px 150px 0px;
+}
+.new_arrival_item{
+    position: relative;
+    margin: 0px 20px 20px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 0px 15px 20px;
+}
+.new_arrival_item img{
+    width: 100%;
+    height: 90%;
+}
+.new_arrival_detail{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    opacity: 0;
+}
+.new_arrival_name{
+    display: inline-block;
+}
+.new_arrival_heart{
+    float: right;
+}
+.new_arrival_item:hover .new_arrival_detail{
+    opacity: 1;
+}
+.new_arrival_detail a{
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 5px;
+    color: red;
+    background-color: rgba(221, 221, 221, 0.897);
+}
+.new_arrival_detail a:hover{
+    background-color: red;
+    color: white;
+}
+.new_arrival_item img:hover{
+    opacity: .4;
+}
+
+/* end new arrival */
+
+/* start subcribe */
+.subcribe{
+    background-color: rgb(225 28 11);
+    color: white;
+    margin-top: 50px;
+    padding: 60px 0px;
+
+}
+.subcribe div{
+    margin-left: 250px;
+    float: left;
+
+}
+.subcribe div p{
+    margin: 10px 0px 20px;
+
+}
+.subcribe_input{
+    width: 400px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid red;
+
+}
+.subcribe_button{
+    width: 100px;
+    height: 43px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+}
+.subcribe_logo{
+    margin-left:100px ;
+}
+/* end subcribe */
+
+/* start news */
+.news{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 20px 150px 0px;
+}
+.news_img{
+    width: 100%;
+}
+.news>div{
+    margin: 0px 20px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+}
+.news_body{
+    padding: 10px 20px 20px;
+}
+.news_img:hover{
+    transform:scale(1.3) ;
+    transition-duration: .8s;
+
+}
+.img_hover{
+    overflow: hidden;
+    display: inline-block;
+}
+.news_body small{
+    margin: 10px 0px;
+    display: inline-block;
+    font-style: italic;
+}
+.read_more{
+    float: right;
+    margin: 10px 0px 20px;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: red;
+}
+.read_more:hover{
+    background-color: red;
+    color: white;
+}
+/* end news */
+
+/* start footer */
+.footer{
+    background-color: black;
+    margin-top: 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: 800px 200px 200px auto;
+}
+.footer div{
+    margin: 100px ;
+}
+.footer_divided{
+    width:50px;
+    border: 2px solid red;
+    margin: 5px 0px 20px;
+}
+.footer_nav_item{
+    color: white;
+    text-decoration: none;
+    padding-top: 20px;
+    display: inline-block;
+}
+.footer_address{
+    padding-top: 20px;
+}
+.footer_social{
+    margin-top: 30px;
+}
+.footer_social a{
+    color: white;
+    padding: 0px 5px;
+}
+/* end footer */
+/* start product  */
+.product_h1{
+    text-align: center;
+    color: rgb(58, 13, 4);
+    font-style: italic;
+    text-decoration: underline red;}
+.new_arrival_img{
+    width: auto;
+    height: auto;
+}
+/* start news page */
+.onclick{
+    margin-top: 50px;
+    margin-bottom:50px;
+    background-color: #06ce06b8;
+    margin-left: 100px;
+    float: left;
+    width: 150px;
+    height:40px;
+    font-size: x-large;
+}
+.button_onclick{
+    margin-top: 50px;
+    margin-bottom:50px;
+    background-color:  #06ce06b8;
+    margin-right: 100px;
+    float: right;
+    width: 150px;
+    height:40px;
+    font-size: x-large;
+}
+.title1{
+    margin-top: 170px;
+    margin-left: 170px;
+    text-align: center;
+    color:red;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-shadow: #3422ff;
+}
+.gride{
+    margin-top: 75px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns:45% auto 9%;
+    font-size: medium;
+    color: rgb(36, 36, 108);
+}
+.gride img{
+    width: 95%;
+    height: 100%;
+}
+.freezing{
+    font-size: x-large;
+    font-style: italic;
+    color: rgb(28, 78, 229);
+    }
+.newpage_bgcolorS{
+    background-color: rgb(251, 251, 250);
+}
+.new_bg{
+    background-color: rgb(125, 227, 231);
+}
+/* end news page */
+/* start register page */
+
+.subcribe_in{
+    display: grid;
+    width: 250px;
+    height: 30px;
+    margin: 30px 30px 30px 30px;
+    outline: none;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid red;
+
+}
+.subcribe_submit_button{
+    width: 100px;
+    height: 35px;
+    margin-left: 20px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    margin-bottom: 25px;
+}
+.subcribe_button_div{
+    margin-top: 75px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns:45% auto 25%;
+    font-size: medium;
+    color: rgb(36, 36, 108);
+}
+.register_bgimg{
+    background-color: #daecf5;
+}
+.subcribe_button_div img{
+    margin-top: 25px;
+    width: 80%;
+    height: 75%;
+}
+/* end register page */
+/* start contact page */
+.subcribe_contact{
+    margin-top: 15px;
+    margin-left: 150px;
+    width: 400px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid red;
+
+}
+.subcribe_contact_button{
+    width: 100px;
+    height: 41px;
+    margin-left: 3px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: green;
+    color: white;
+    border: 1px solid rgb(137, 7, 12);
+}
+.contact_div{
+    background-color: #eff5f9;
+}
+.contact_button{
+    margin-top: 75px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns:45% auto 45%;
+    font-size: medium;
+    color: rgb(36, 36, 108);
+}
+.contact_button img{
+    margin-top: 25px;
+    width: 80%;
+    height: 75%;
+}
+.contact_button small{
+    margin-top: 25px;
+    font-size: large;
+}
+
+/* end contact page */
+
+/* start Blog */
+.blog_img:hover{
+    transform: scale(1.2);
+    transition-duration: 8s;
+}
+.blog_hover{
+    overflow: hidden;
+}

@@ -17,7 +17,7 @@ $(document).ready(function(){
                 <td>${v.price}</td>
                 <td><button class="min" data-key="${i}">-</button>
                 ${v.qty}
-                <button class="max" data-key="${z}">+</button>
+                <button class="max" data-key="${j}">+</button>
                 </td>
                 <td>${v.price*v.qty}</td>
                 </tr>`
@@ -125,7 +125,7 @@ $(document).ready(function(){
             }
             })
     })
-    $('#order_now').click(function{
+    $('#order_now').click(function(){
         let ans=confirm('Are you sure order?');
         //console.log(ans);
         if(ans){
