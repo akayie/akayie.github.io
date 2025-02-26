@@ -6,13 +6,23 @@
     <title>producthomework</title>
 </head>
 <body>
-    <h1>Product Homework</h1>
+    <h1>Product Homework and * homework</h1>
     <script>
-                //homework ypur input data all i
 
         let yourNumber =Number(prompt ("Enter a Number: "));
         for(let k = 1 ;k <= 12; k++ ){
             document.write(`<h1> ${yourNumber} x ${k} = ${k * yourNumber }</h1>`);
+        }
+
+        // star homework 
+
+        for (let h =5 ; h >= 0; h-- ){
+            for (let m = 1; m <= h; m ++){
+                document.write(`*`);
+            }
+
+            document.write(`<br>`);
+
         }
     </script>
 </body>
