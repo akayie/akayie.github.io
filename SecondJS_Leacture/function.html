@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Lessons</title>
+</head>
+<body>
+    <h1>Function Lessons</h1>
+    <script>
+        // naming function
+        function showData(){
+            document.write(`<h1> This is naming function</h1> <br>`);
+
+        }
+        showData();
+        
+        // argument function
+        function sum(num1,num2){
+            document.write(`This sum result is ${num1+num2} <br>`);
+        }
+        sum(3,5);
+       sum(13,15);
+
+       //default Fumction
+       function multi(num1=10,num2=5){
+        document.write(`This multi result is ${num1*num2}<br>`);
+       }
+       multi();
+       multi(3,5);
+
+       //return function
+       function resultData(num1,num2){
+        let result=num1+num2;
+        return result;
+
+       }
+       let finalResult = resultData(205,180);
+       console.log(finalResult);
+    </script>
+</body>
+</html>
