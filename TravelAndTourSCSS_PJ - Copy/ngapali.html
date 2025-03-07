@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="stylesheet" href="fontawesomeicon/css/all.min.css">
+    <link rel="stylesheet" href="fontawesomeicon/js/all.min.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .grid_detail {
+        display: grid;
+        margin-top: 10px;
+        grid-template-columns: auto auto auto;
+        gap: 5px;
+        margin-bottom: 35px;
+        /* background-color: dodgerblue; */
+        /* padding: 10px; */
+    }
+
+    /* .grid_detail>div img {
+        background-color: #f1f1f1;
+        color: #000;
+        width: 100%;
+        height: 120%;
+        opacity: 1;
+        transition: .3s;
+        will-change: filter;
+        display: block;
+        padding: 10px;
+        font-size: 30px;
+        text-align: center;
+    } */
+
+    .details {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    img:hover {
+        filter: brightness(90%) hue-rotate(50deg);
+        transform: scale(1.04);
+        cursor: pointer;
+    }
+
+    img {
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .detail_review_title {
+        margin-top: 50px;
+    }
+
+    .detail_reviews {
+        margin: 35px 0px 5px 0px;
+        display: grid;
+        grid-template-columns: 53% auto;
+        align-items: center;
+        grid-column-gap: 40px;
+    }
+
+    .detail_h3 {
+        margin-bottom: 10px;
+    }
+
+    .details ul {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .check {
+        color: rgb(52, 187, 52);
+        margin-right: 10px;
+    }
+
+    .cross {
+        color: rgb(233, 52, 52);
+        margin-right: 10px;
+    }
+
+    .list {
+        list-style: none;
+    }
+
+    .circle {
+        color: blue;
+        font-size: xx-small;
+        margin-right: 10px;
+        
+    }
+
+    .grid_detail {
+        width: 97%;
+        height: 450px;
+        background-image: url(images/nabg2.jpg );
+        background-size: 100% 100%;
+        border: 1px solid rgb(246, 244, 244);
+    
+    }
+
+    .img {
+        margin-top: 50px;
+        margin-left: 25px;
+        clip-path: circle(50%);
+        opacity: 1;
+        /* border-radius: 10px; */
+        transition: .3s;
+        will-change: filter;
+        display: block;
+        /* padding: 10px; */
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    .detail_text h2 {
+        color: brown;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .detail_text p li {
+        display: block;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 35px;
+        text-align: justify;
+    }
+</style>
+
+<body >
+
+
+    <div class="grid_detail details">
+        <div>
+            <img src="images/napapo3.jpg" alt="Pineapple" width="300" height="300" class="img">
+        </div>
+        <div>
+            <img src="images/napapo2.jpg" alt="" width="300" height="300" class="img">
+        </div>
+        <div>
+            <img src="images/napapo1.jpg" alt="" width="300" height="300" class="img">
+        </div>
+
+    </div>
+
+    <div class="details1">
+        <h2 class="detail_review_title">Yangon – Ngapali – Yangon </h2>
+
+        <h2 class="detail_review_title detail_h3">Overviews</h2>
+        <h3 class="detail_h3">Per adult = 350,000/- Kyats (2 or 3 people sharing)</h3>
+
+        <hr>
+        <ul class="list">
+            <h2 class="detail_h3 ">Itineraries</h2>
+            <h4>Day 1</h4>
+            <h4>Yangon - Ngapali</h4>
+            <li><i class="fa-regular fa-circle circle "></i>We will start our journey from Yangon at around 8pm (8pm) in front of Aung San Stadium. We will meet our guests at various stops along the way. During the Lock Down, we will stop briefly and sleep in the car.  </li><br>
+            <h4>Day 2</h4>
+            <h4>Ngapali</h4>
+            <li><i class="fa-regular fa-circle circle"></i>We will depart at 4:00 AM and arrive at Ngapali Beach early in the morning. We will have breakfast at a local restaurant on Ngapali Beach, check-in at the hotel and rest. We will have lunch and dinner at a local restaurant.  </li><br>
+            <h4>Day 3</h4>
+            <h4>Ngapali</h4>
+            <li><i class="fa-regular fa-circle circle"></i>Breakfast at the hotel and start the island tour. Visit Nyaungpin Island Beach, Blue Lagoon, Floating Bridge, etc. and have lunch at Paradise Restaurant. Continue to visit Thae Phyu Island, Light House, Pearl Island and do some snorkeling. In the evening, return to the hotel and relax. After dinner at a local restaurant, you will have a peaceful night's sleep at the hotel. </li><br>
+            <h4>Day 4</h4>
+            <h4>Ngapali - Yangon</h4>
+            <li><i class="fa-regular fa-circle circle"></i> Breakfast at the hotel and check-out from the hotel. We will also visit the Mya Yadana Pyay Pagoda, the Rak Pyay Pagoda on the top of the mountain, and the three famous pagodas of Thandwe, namely An Taw, San Taw, and Nam Taw. After shopping for local souvenirs at Thandwe Market, we will depart for Yangon. Lunch will be served at a local restaurant and we will continue our journey to Yangon. We will return to Yangon in the early evening and enjoy a pleasant trip.</li><br>
+           
+            
+
+        </ul>
+
+        <hr>
+        <div class="detail_reviews details">
+            <div class="detail_text">
+                <ol class="list">
+                    <h2>Included / Excluded</h2><br>
+                    <br>
+                    <li><i class="fa-solid fa-circle-check check"></i> Private car service (Air Condition Vehicle) throughout the trip
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-check check"></i>Breakfast, lunch, dinner throughout the trip
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-check check"></i>3 nights accommodation in a 4* hotel
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-check check"></i>Daily clean water, snow tower, candy, etc.
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-check check"></i>Basic medical service
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-check check"></i>Tour Leader service throughout the trip
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-check check"></i>Guide and Driver Tipping
+                    </li><br>
+                </ol>
+            </div>
+
+            <div class="detail_text ">
+                <ol class="list">
+                    <li><i class="fa-solid fa-circle-xmark cross"></i>Extra visits not included in the trip and personal expenses not mentioned in the itinerary
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-xmark cross"></i>Extra cold drinks and beverages consumed in restaurants
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-xmark cross"></i>Mini Bar use fee and extra clean water, Cold and soft drinks, laundry, phone usage and TV Pay Channel usage
+                    </li><br>
+                    <li><i class="fa-solid fa-circle-xmark cross"></i>Travel insurance
+                    </li><br>
+
+                </ol>
+                </p>
+                <!-- <a href="#" class="btn">Read More</a> -->
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- Tour Packages start -->
+    <section class="package" id="package">
+        <div  >
+
+          <div class="package_text">
+            <h1>Ngapali <span>P</span>ackages</h1>
+          </div>
+          <div class="package_all";>
+            <div  class="col-md-4 py-3 py-md-0">
+              <div class="card">
+                <img src="images/ngpk1.jpg" alt="" class="package_img"style='width: 100%;height: 240px;object-fit: cover;'>
+                <div class="card_body">
+                  <h3>Nighttime Beach Fire Show</h3>
+                  <p>For those looking for something special at night, a beach fire show can be a spectacular way to end the day. Combine it with cocktails or a beach BBQ for a complete experience.</p>
+                  <div class="stars">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <h6 class="price">Price Per Person: <span> 700000 MMK </span></h6>
+                  <!-- <h6 class="price">Price Per person:<span > <small class="package_price"> 700000</small> MMK</span></h6> -->
+                  <a href="register.html">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <div  class="col-md-4 py-3 py-md-0">
+              <div class="card">
+                <img src="images/ngpk2.jpg" alt="" class="package_img"style='width: 100%;height: 240px;object-fit: cover;'>
+                <div class="card_body">
+                  <h3>Cycling Tour</h3>
+                  <p>Provide bicycles for a day tour around the area, allowing guests to explore the local culture, small villages, and scenic coastlines at their own pace.</p>
+                  <div class="stars">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <h6 class="price">Price:<span> 700000 MMK </span></h6>
+                  <a href="register.html">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <div  class="col-md-4 py-3 py-md-0">
+              <div class="card">
+                <img src="images/ngpk3.jpg" alt="" class="package_img"style='width: 100%;height: 240px;object-fit: cover;'>
+                <div class="card_body">
+                  <h3>Jungle Trekking & Eco-Tourism</h3>
+                  <p>Take guests on an adventurous eco-tour of Ngapali’s surrounding forests, highlighting its unique flora and fauna. Include a visit to local reserves or eco-friendly farms</p>
+                  <div class="stars">
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star checked"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <h6 class="price">Price Per Person:<span> 90000MMK</span></h6>
+                  <a href="register.html">Book Now</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+       </section>
+<!--end tour packages  -->
+</body>
+
+</html>

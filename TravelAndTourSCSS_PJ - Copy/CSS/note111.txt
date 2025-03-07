@@ -1,0 +1,39 @@
+.title_one{
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 150px;
+  color: red;
+  font-size: xx-large;
+  font-weight: 800;
+}
+.title_one span{
+  color: black;
+}
+.title_one span{
+  color: black;
+}
+.box_conta{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  margin: 20px 200px 0px;
+  grid-column-gap: 35px;
+  box-shadow: 15px rgba(0, 0,0, 0.2);
+  border-radius: 5px;
+  position: relative;
+
+}
+.box_conta .box .stars{
+  position: relative;
+  color: #999;
+  line-height: 1.5rem;
+  padding-top: 1.5;
+  padding-bottom: 15px;
+  font-size: 35px;
+}
+.stars i{
+  font-size: 15px;
+}
+
+.box_conta .box .p{
+  font-size: 30px;
+}

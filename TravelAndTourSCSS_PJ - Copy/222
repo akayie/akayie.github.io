@@ -1,0 +1,31 @@
+/* Responsives */
+@media (max-width: 1200px) {
+  /* For Laptops */
+  
+  .grid_detail1 {
+    grid-template-columns: auto auto;
+    height: auto;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  /* For Tablets */
+  .grid_detail1 {
+    background-image:none;
+ }
+ 
+}
+
+@media (max-width: 480px) {
+  /* For Mobile Phones */
+ 
+  
+  .grid_detail1 {
+    grid-template-columns: auto;
+    background-image:none;
+    height: auto;
+  }
+
+}
