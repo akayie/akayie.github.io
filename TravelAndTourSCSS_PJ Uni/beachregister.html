@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel and Tour</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="fontawesomeicon/css/all.min.css">
+  <link rel="stylesheet" href="fontawesomeicon/js/all.min.js">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  
+</head>
+
+<body>
+  <!-- logo -->
+  <header>
+    <nav class="nav item1" id="up">
+      <a href=""><img src="Images/logo188.png" alt="" class="nav_logo"></a>
+      <ul class="nav_item">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Tours ▾</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="populartrip.html">Popular Tours</a>
+            </li>
+            <li>
+              <a href="beachtrip.html">Beach Tours</a>
+            </li>
+            <li>
+              <a href="shanstatetrip.html">Shan State Tours</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="thingtodo.html">Things to Do</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="">Register ▾</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="popularregister.html">Popular Tour Booking</a>
+            </li>
+            <li>
+              <a href="beachregister.htmls">Beach Tour Booking</a>
+            </li>
+            <li>
+              <a href="ShanStateregister.html">Shan State Tour Booking</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="plan.html">Plan to Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- end nav -->
+
+  <div class="form-container">
+    <h1>Beach Tour Booking Form</h1>
+    <p><b>Please fill out this form to block a Beach tour.</b></p>
+    <br>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="example@gmail.com" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+      </div>
+      <div class="form-group">
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+      </div>
+
+      <div class="form-group">
+        <label>Choose Beach Tours</label>
+        <select name="tourOption" id="tourOption" onchange="">
+          <option value="c"></option>
+          <option value="NNOP">Yangon-Kawthaung-Nyaung Oo Phee</option>
+          <option value="KAP">Yangon-Kawthaung-Awei Pila-Yangon </option>
+          <option value="CNS">ChaungThar-NgweSaung-ShweThaungYan</option>
+          <option value="NP">Yangon-NgaPali-Yangon</option>
+          <option value="M">Yangon-Kawthaung-Myeik-Yangon</option>
+        </select>
+      </div>
+      <div class="form-group">
+
+      
+    </div>
+      <div class="form-group ">
+        <label>Select Options</label>
+        <div class="dropdown table-container">
+          <button class="dropdown-toggle button1">Choose Options</button>
+          <div class="dropdown-content labelth" id="dropdownContent">
+            <table cellspacing="0" cellpadding="15">
+              <tr>
+                  <th>Yangon - Kawthaung - Nyaung Oo Phee</th>
+                  <th>Yangon - Kawthaung - Awei Pila - Yangon</th>
+                  <th>ChaungThar - NgweSaung - ShweThaungYan</th>
+                  <th>Yangon-NgaPali-Yangon</th>
+                  <th>Yangon - Kawthaung - Myeik - Yangon</th>
+                  <th>Yangon - Kawthaung - Myeik - Yangon</th>
+
+              </tr>
+              <tr>
+                <td> 
+                  <input type="checkbox" value="option2">Private speedboat transfer
+                </td>                 
+                <td> 
+                  <input type="checkbox" value="option2">Ship ride around Island
+                </td><td> 
+                  <input type="checkbox" value="option2">Sunset Dinner Cruise
+                </td><td> 
+                  <input type="checkbox" value="option2">Nighttime Beach Fire Show
+                </td><td> 
+                  <input type="checkbox" value="option2">Island Hopping Adventure
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <input type="checkbox" value="option2">Scuba diving session
+                </td>                 
+                <td> 
+                  <input type="checkbox" value="option2">Sunset Cruise
+                </td><td> 
+                  <input type="checkbox" value="option2">Water Sports Activities 
+                </td><td> 
+                  <input type="checkbox" value="option2">Cycling Tour
+                </td><td> 
+                  <input type="checkbox" value="option2">Snorkeling & Diving
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <input type="checkbox" value="option2">Romantic candlelight dinner
+                </td>                 
+                <td> 
+                  <input type="checkbox" value="option2">Awei Pila Pre Weeding Photographer
+                </td><td> 
+                  <input type="checkbox" value="option2">Relaxing Spa and Wellnes
+                </td><td> 
+                  <input type="checkbox" value="option2">Jungle Trekking & Eco-Tourism
+                </td><td> 
+                  <input type="checkbox" value="option2">Kayaking & Water Sports
+                </td>
+              </tr>
+              
+          </table>
+          </div> 
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="comments">Descriptions</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="files">Select files:</label>
+        <input type="file" id="files" name="files" multiple>
+      </div>
+
+      <button type="submit" class="button2">Submit</button>
+    </form>
+  </div>
+
+ 
+
+
+
+  <!-- <h1 class="uparrow"><a href="#up"><i class="fa-solid fa-up-long fa-1x" ></i></a></h1> -->
+  <h1 class="uparrow"><a href="#up"><img src="Images/upicon3.png" alt="" width="40px" height="40px"></a></h1>
+  <!--start footer  -->
+  <footer>
+    <div class="footer">
+      <div class="footer_about">
+        <h2>Easy-Go</h2>
+        <hr class="divided_footer">
+        <p>"Adventure awaits. Are you ready?"<br>
+          " Find your travel rhythm with us"<br>
+          " Travel made easy, memories made forever"
+        </p>
+      </div>
+      <div>
+        <a href="index.html" class="footer_nav_item">Home</a>
+        <a href="about.html" class="footer_nav_item">About</a>
+        <a href="contact.html" class="footer_nav_item">Contact Us</a>
+      </div>
+      <div>
+        <a href="thingtodo.html" class="footer_nav_item">Things To Do</a>
+        <a href="register.html" class="footer_nav_item">Register</a>
+        <a href="plan.html" class="footer_nav_item">Plans to Visit</a>
+      </div>
+      <div>
+        <address class="footetr_address"> <i class="fa-solid fa-house" class="address_icon"></i>Yangon,Myanmar</address>
+        <address class="footetr_address"> <i class="fa-solid fa-phone-volume" class="address_icon"></i> 09-950371675
+        </address>
+        <address class="footetr_address"><i class="fa-solid fa-envelope" class="address_icon"></i>
+          easygotravels@gmail.com</address>
+        <p class="footer_social_icon">
+          <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-2x"></i></a>
+          <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter fa-2x"></i></a>
+          <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2x"></i></a>
+          <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-2x"></i></a>
+          <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter fa-2x"></i></a>
+          <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2x"></i></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
