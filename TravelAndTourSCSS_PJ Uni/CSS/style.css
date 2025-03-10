@@ -61,7 +61,7 @@ body {
   background: #ffffff;
   display: none;
   min-width: 150px;
-  z-index: 1000;
+  /* z-index: 1000; */
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -2419,3 +2419,70 @@ margin: 0 auto;
 
 
 /* beach trip */
+/* plan */
+
+
+.plan{
+  margin: 50px 150px 50px 150px;
+}
+.plan0{
+  margin: 50px 150px 50px 150px;
+}
+.package_one{
+  margin-top: 20px;
+}
+
+/* shopping */
+.plan00{
+  margin-left: 150px;
+  margin-right: 150px;
+  width: 80%;
+  height: 500px;
+}
+
+/* ****** */
+/* Default (Laptop/Desktop - 1024px and above) */
+.plan, .plan0 {
+  margin: 50px 150px;
+}
+.package_one {
+  margin-top: 20px;
+}
+.plan00 {
+  margin-left: 150px;
+  margin-right: 150px;
+  width: 80%;
+  height: 500px;
+}
+
+/* Tablet (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .plan, .plan0 {
+      margin: 30px 50px;
+  }
+  .package_one {
+      margin-top: 15px;
+  }
+  .plan00 {
+      margin-left: 30px;
+      margin-right: 30px;
+      width: 90%;
+      height: 400px;
+  }
+}
+
+/* Mobile (up to 767px, specifically for 480px) */
+@media (max-width: 767px) {
+  .plan, .plan0 {
+      margin: 20px 20px;
+  }
+  .package_one {
+      margin-top: 10px;
+  }
+  .plan00 {
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 100%;
+      height: auto;
+  }
+}
