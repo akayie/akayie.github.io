@@ -1,0 +1,222 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  @font-face {
+    font-family: "Roboto", sans-serif;
+    src: url(/TravelAndTourSCSS_PJ/Roboto-Black.ttf)
+  }
+  
+  body {
+    background-color: rgb(252, 251, 251);
+  }
+  
+  .nav {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+  }
+  
+  .nav_logo {
+    width: 100px;
+    height: 90px;
+  }
+  
+  .nav_item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: auto 50px;
+  }
+  
+  .nav_item li {
+    list-style: none;
+    position: relative;
+  }
+  
+  .nav_item a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    transition: color 0.3s;
+  }
+  
+  .nav_item a:hover {
+    color: red;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+  
+    /* Tablet */
+    .nav {
+      flex-direction: column;
+      padding: 10px 20px;
+    }
+  
+    .nav_item {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+  }
+  
+  @media (max-width: 768px) {
+  
+    /* Mobile */
+    .nav {
+      padding: 10px;
+    }
+  
+    .nav_logo {
+      margin: 10px auto;
+    }
+  
+    .nav_item {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+/* Back-to-Top Button */
+.uparrow {
+    text-align: end;
+    margin-right: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .uparrow a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .uparrow a img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: black;
+    margin-top: 50px;
+    color: white;
+    padding: 80px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .footer_about {
+    margin-left: 20px;
+  }
+  
+  .divided_footer {
+    width: 80px;
+    border: 2px solid red;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  
+  .footer_about p {
+    width: 100%;
+    line-height: 20px;
+  }
+  
+  .footer_nav_item {
+    color: white;
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .footetr_address {
+    margin-top: 20px;
+  }
+  
+  .address_icon {
+    padding-right: 10px;
+  }
+  
+  .footer_social_icon a {
+    color: white;
+    margin-top: 20px;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  /* Responsiveness */
+  @media only screen and (max-width: 1024px) {
+    .footer {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 60px 20px;
+    }
+  
+    .footer_about {
+      margin-left: 10px;
+    }
+  
+    .footer_about p {
+      width: 90%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .footer {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 40px 20px;
+    }
+  
+    .footer_about {
+      margin-left: 5px;
+    }
+  
+    .footer_about p {
+      width: 100%;
+    }
+  
+    .footer_nav_item,
+    .footetr_address,
+    .footer_social_icon a {
+      margin-top: 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .footer {
+      grid-template-columns: 1fr;
+      padding: 30px 10px;
+    }
+  
+    .footer_about {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .divided_footer {
+      margin: 5px auto;
+    }
+  
+    .footer_about p {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer_nav_item,
+    .footetr_address,
+    .footer_social_icon a {
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+    .footer_social_icon {
+      text-align: center;
+    }
+  }  

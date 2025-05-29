@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1>Hello jQuery</h1>
+    <button id="click">Click</button>
+
+    <!-- CDN - Cintent Deliver NetWork -->
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <!-- local Installation -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        // jQuery(selector).action()
+        // jQuery(document).ready(function(){
+
+        // })
+        // $("#click").click(function(){
+        //     alert("jQuery is funny! ")
+        // })
+
+        $(document).ready(function(){
+            $('#click').click(function(){
+                $('h1').hide(function(){
+                    alert("Hided h1.");
+                });
+            })
+        })
+        
+    </script>
+</body>
+</html>
