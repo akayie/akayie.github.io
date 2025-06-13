@@ -41,6 +41,7 @@ body {
     left: 50%;
     top: 50%;
     position: absolute;
+    background-color: white;
     margin: -260px 0 0 -220px;
     /*background-color: gray;*/
 }
