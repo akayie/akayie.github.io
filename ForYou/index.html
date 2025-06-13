@@ -11,6 +11,70 @@
 
       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
    <style>
+
+    body {
+  background-color: #fff;
+  color: #f0f00e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Pacifico', cursive;
+  padding: 1rem; /* prevent text touching edges on small screens */
+  box-sizing: border-box;
+  text-align: center; /* better on small screens */
+  flex-direction: column; /* stack content vertically on narrow screens */
+}
+
+h3 {
+  font-size: 2.5rem; /* use rem instead of em for better scaling */
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  justify-content: center;
+  max-width: 90vw; /* limit width on small devices */
+  margin: 0 auto;
+}
+
+h3 span {
+  opacity: 0;
+  transform: translateY(-30px);
+  display: inline-block;
+  animation: bounceIn 0.6s forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+  body {
+    height: auto; /* allow page to grow vertically on small screens */
+    padding: 1rem;
+  }
+}
+/* 
   body {
     background-color: #fff;
     color: #f0f00e;
@@ -47,7 +111,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
+  } */
 </style>
 
 
