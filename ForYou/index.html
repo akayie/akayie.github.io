@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>For Wine Wine</title>
+    <title>For Wine Wine &#128151;</title>
     <meta name="language" content="en-US">
     <meta name="title" content="To My Bby">
     <meta name="description" content="Collecting this wasn't easy — your star is my motivation to keep going! Contributions are welcome too.">
@@ -145,17 +145,44 @@ h3 span {
 
     <script type="text/javascript" src="js/love.js"></script>
 
-    <script>
-    const text = "For My Dr Lay!";
-    const container = document.getElementById("animatedText");
+   <!-- <div id="animatedText"></div> -->
 
-    text.split('').forEach((char, index) => {
-      const span = document.createElement("span");
-      span.textContent = char;
-      span.style.animationDelay = `${index * 0.1}s`;
-      container.appendChild(span);
-    });
-  </script>
+<script>
+  const heart = `<span style="color:#ff00bf;">${String.fromCodePoint(0x2764)}</span>`;
+  const text = `For My Dr Lay ${heart}`;
+  const container = document.getElementById("animatedText");
+
+  const temp = document.createElement("div");
+  temp.innerHTML = text;
+
+  [...temp.childNodes].forEach((node, i) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      node.textContent.split('').forEach((char, index) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.display = "inline-block";
+        span.style.animation = "fadeIn 0.5s ease forwards";
+        span.style.animationDelay = `${(i + index) * 0.1}s`;
+        container.appendChild(span);
+      });
+    } else {
+      node.style.display = "inline-block";
+      node.style.animation = "fadeIn 0.5s ease forwards";
+      node.style.animationDelay = `${i * 0.1}s`;
+      container.appendChild(node);
+    }
+  });
+
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
 
 </body>
 
