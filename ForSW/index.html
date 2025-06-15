@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Soe Wai &#128151;</title>
+    <meta name="language" content="en-US">
+    <meta name="title" content="To My Bby">
+    <meta name="description" content="Collecting this wasn't easy — your star is my motivation to keep going! Contributions are welcome too.">
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+    <link rel="stylesheet" href="css/love.css">
+
+      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <style>
+
+    body {
+  background-color: #fff;
+  color: #4415de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Pacifico', cursive;
+  padding: 1rem; /* prevent text touching edges on small screens */
+  box-sizing: border-box;
+  text-align: center; /* better on small screens */
+  flex-direction: column; /* stack content vertically on narrow screens */
+}
+
+h3 {
+  font-size: 2.5rem; /* use rem instead of em for better scaling */
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  justify-content: center;
+  max-width: 90vw; /* limit width on small devices */
+  margin: 0 auto;
+}
+
+h3 span {
+  opacity: 0;
+  transform: translateY(-30px);
+  display: inline-block;
+  animation: bounceIn 0.6s forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+  body {
+    height: auto; /* allow page to grow vertically on small screens */
+    padding: 1rem;
+  }
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+    <h3 id="animatedText"></h3>
+  
+    <!-- <audio autoplay="autopaly" loop="loop" id="audios" preload="auto">
+        <source src="MP3/1.mp3" />
+    </audio> -->
+<audio id="audios" preload="auto" autoplay loop>
+  <source src="MP3/3.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("audios");
+    audio.volume = 1;  // Max volume
+
+    const tryPlay = () => {
+      audio.play().catch(() => {
+        console.log("Autoplay blocked. Waiting for user interaction...");
+
+        const resumeAudio = () => {
+          audio.play().then(() => {
+            console.log("Audio started after user interaction.");
+          }).catch(err => {
+            console.warn("Still blocked:", err);
+          });
+          document.removeEventListener("click", resumeAudio);
+        };
+
+        document.addEventListener("click", resumeAudio);
+      });
+    };
+
+    tryPlay();
+  });
+</script>
+
+
+
+    <div class="container" onselectstart="return false;" unselectable="on" style="-moz-user-select:none;">
+
+        <div class="body_left">
+            <img src="images/biubiubiu.gif" alt="" ondragstart='return false;'>
+        </div>
+
+        <div class="body_center love">
+            <div class="block">
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <div class="div4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="border">
+            <div class="border-top"></div>
+            <div class="border-bottom"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/love.js"></script>
+
+   <!-- <div id="animatedText"></div> -->
+
+<script>
+  const heart = `<span style="color:#ff00bf;">${String.fromCodePoint(0x2764)}</span>`;
+  const text = `For You ${heart}`;
+  const container = document.getElementById("animatedText");
+
+  const temp = document.createElement("div");
+  temp.innerHTML = text;
+
+  [...temp.childNodes].forEach((node, i) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      node.textContent.split('').forEach((char, index) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.display = "inline-block";
+        span.style.animation = "fadeIn 0.5s ease forwards";
+        span.style.animationDelay = `${(i + index) * 0.1}s`;
+        container.appendChild(span);
+      });
+    } else {
+      node.style.display = "inline-block";
+      node.style.animation = "fadeIn 0.5s ease forwards";
+      node.style.animationDelay = `${i * 0.1}s`;
+      container.appendChild(node);
+    }
+  });
+
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
+
+</body>
+
+</html>
+
+
