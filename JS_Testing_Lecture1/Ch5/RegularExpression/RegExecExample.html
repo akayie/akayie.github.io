@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp exec() Example </title>
+    <script type="text/javascript">
+        var text = "mon and dad and baby";
+        var pattern = /mon( and dad( and baby)?)?/gi;
+        var matches = pattern.exec(text);
+            alert(matches.index);
+            alert(matches.input);
+            alert(matches[0]);
+            alert(matches[1]);
+            alert(matches[2]);
+            alert(matches[3]);
+       
+       </script>
+</head>
+<body>
+    
+</body>
+</html>

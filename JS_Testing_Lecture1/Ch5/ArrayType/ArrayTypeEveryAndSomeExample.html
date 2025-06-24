@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Type Every and Some Example </title>
+</head>
+<body>
+     <script>
+        var numbers = [1,2,3,4,5,4,3,2,1];
+
+        var everyResult =  numbers.every(function(item,index,array){
+            return (item > 2);
+        });
+        alert (everyResult);
+
+        var someResult =  numbers.some(function(item,index,array){
+            return (item > 2);
+        });
+        alert (someResult);
+        
+        var filterResult =  numbers.filter(function(item,index,array){
+            return (item > 2);
+        });
+        alert (filterResult);
+
+        var mapResult =  numbers.map(function(item,index,array){
+            return (item > 2);
+        });
+        alert (mapResult);
+
+        numbers.forEach(function(item,index,array){
+            var test = item = 2;
+            alert("item" + item + " and test result " + test);
+        });
+     </script>
+</body>
+</html>

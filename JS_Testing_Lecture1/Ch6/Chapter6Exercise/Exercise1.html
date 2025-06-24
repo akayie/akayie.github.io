@@ -1,0 +1,28 @@
+<!-- Create an object named Person with properties (name, age, job) and a method named sayName which return the name of object with alert. Create an instance of object with "Nicholas", 29, Software Engineer". Call the method of Object (Parasitic Constructor Pattern). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercise 1</title>
+    <script type="text/javascript">
+        function Person (name, age, job){
+            var obj = new Object();
+            obj.name =  name;
+            obj.age = age;
+            obj.job = job;
+            obj.SayName = function() {
+                alert(this.name);
+            };
+        return obj;
+        }
+
+        var person =  new Person("Nicholas", 29, "Software Engineer");
+        person.SayName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

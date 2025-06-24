@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Factory Pattern Example</title>
+    <script type="text/javascript">
+       function createPerson (name, age, job){
+        var o = new Object();
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayName = function(){
+            alert (this.name);
+        };
+        return o;
+    }
+    
+       var person1 = new createPerson("Nicholas" , 29, "Software Engineer");
+       var person2 = new createPerson("Greg" , 27, "Doctor");
+        person1.sayName();
+        person2.sayName();
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

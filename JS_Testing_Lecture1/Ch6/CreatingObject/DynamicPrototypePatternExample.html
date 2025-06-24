@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dynamic Prototype Pattern Example</title>
+    <script type="text/javascript">
+       function Person (name, age, job){
+        this.name;
+        this.age;
+        this.job;
+       if( typeof this.sayName != "function"){
+        Person.prototype.sayName = function(){
+            alert (this.name);
+        };
+       }
+    }
+       var friend = new Person("Nicholas" , 29, "Software Engineer");
+       friend.sayName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
