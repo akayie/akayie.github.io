@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Combination Inheritance Example</title>
+    <script type="text/javascript">
+       function SuperType (name){
+        this.name = name;
+        this.colors =["red", "blue", 'green'];
+       
+    };
+    
+       SuperType.prototype = sayName = function(){
+        alert (this.name);
+       };
+       function SubType (name,age){
+        SuperType.call(this.name);
+        this.age = age;
+       }
+
+       SubType = prototype = new SuperType();
+       SubType.prototype.sayAge = function(){
+        alert(this.age);
+       };
+       var instance1 = new SuperType("Nicholas" , 29);
+       instance1.colors.push("black");
+       alert(instance1.colors);
+       instance1.sayName();
+       instance1.sayAge();
+
+       var instance2 = new SubType("Greg", 27);
+       alert (instance2.colors);
+       instance2.sayName();
+       instance2.sayAge();
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

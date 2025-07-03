@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frameset Example</title>
+</head>
+
+<frameset rows="200,*"> <!-- use * instead of + for remaining space -->
+    <frame src="frame.html" name="topFrame">
+    
+    <frameset cols="50%,50%">
+        <frame src="anotherframe.html" name="leftFrame">
+        <frame src="anotherframeset.html" name="rightFrame">
+    </frameset>
+</frameset>
+
+</html>

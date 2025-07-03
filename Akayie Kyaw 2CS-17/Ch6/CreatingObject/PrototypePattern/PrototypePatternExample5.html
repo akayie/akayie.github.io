@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prototype Pattern Example 5</title>
+    <script type="text/javascript">
+       function Person (){
+       
+    }
+    
+      
+       var friend = new Person();
+       Person.prototype = {
+        constructor : Person, 
+        name : "Nicholas",
+        age :29,
+        job : "Software Engineer", 
+        sayName : function(){
+            alert (this.name);
+        }
+       };
+
+       friend.sayName();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
