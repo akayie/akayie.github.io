@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Example 2</title>
+</head>
+
+<body>
+    <h1>The Window Object</h1>
+    <h2>The resizeBy() Method</h2>
+    <p> Open a new Window, and resize it: </p>
+    <p>Press "Resize window" multiple times (the window will increase each time).</p>
+    <button onclick="openWin()">Create "myWindow" </button>
+    <button onclick="resizewin()">Resize "myWindow" </button>
+    <script>
+        let myWindow;
+        function openWin() {
+            myWindow = window.open(" ", " ", "width = 100, height = 100");
+        }
+        function resizewin() {
+            myWindow.moveBy(250, 250);
+        }
+    </script>
+</body>
+
+</html>

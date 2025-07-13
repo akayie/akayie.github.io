@@ -1,0 +1,27 @@
+<!-- Create an html page. In this page, uses the regular expression to validate URL the viewer entered. If the URL validate, an alert pops up to say "Validate URL". Otherwise display "Invalid URL!" Assume that you need to URL contain the following: -It must begin with http:// -The characters in between need to be dots(.), hyphen(), letter or numbers. -It must end with a dot and no more than three letters characters. -->
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Validation</title>
+</head>
+<body>
+    <script>
+        function validateUrl() {
+            var url = window.prompt("Enter The URL");
+
+var tomatch = /http:\/\/[A-Za-z0-9.-]{1,}\.[A-Za-z]{3}/;
+
+            if (tomatch.test(url)) {
+                window.alert('Valid URL!');
+            } else {
+                window.alert('Invalid URL!');
+                validateUrl(); // Retry
+            }
+        }
+
+        validateUrl(); 
+    </script>
+</body>
+</html>

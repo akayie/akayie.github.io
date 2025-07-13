@@ -1,0 +1,27 @@
+<!-- Create an array with "Fish". "Octopus", "Prawn". Create another array with "Goat", "Sheep", "Cow", "Bull". Concatenate these two arrays into animals array. Create a random integer to access as index of animals array and display random fruit's name with alert.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Animal</title>
+</head>
+<body>
+    <h2>Click the button to show a random animal</h2>
+    <button onclick="showRandomAnimal()">Show Animal</button>
+
+    <script>
+        function showRandomAnimal() {
+            var seaAnimals = ["Fish", "Octopus", "Prawn"];
+            var landAnimals = ["Goat", "Sheep", "Cow", "Bull"];
+
+            var animals = seaAnimals.concat(landAnimals);
+
+            var randomAnimal = Math.floor(Math.random() * animals.length);
+
+            alert("Random Animal: " + animals[randomAnimal]);
+        }
+    </script>
+</body>
+</html>

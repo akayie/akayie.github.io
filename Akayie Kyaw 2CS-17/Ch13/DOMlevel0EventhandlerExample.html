@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Level 0  Event Handler Example</title>
+</head>
+<body>
+    <input type="button" id="myBtn"value="Click Me" />
+        <input type="button" id="myRemoveBtn" value="Remove Event Handler" />
+        <script type="text/javascript">
+            var btn = document.getElementById("myBtn") //Click first button	Alert with "myBtn" appears
+            btn.onclick = function(){
+                alert(this.id)
+            };
+            var removeBtn = document.getElementById("myRemoveBtn"); //Click second button	Event handler on first button removed
+            //Click first button again	Nothing happens (no more alert)
+                 removeBtn.onclick = function(){
+                    btn.onclick = null;
+            };
+
+        </script>
+</body>
+</html>
+

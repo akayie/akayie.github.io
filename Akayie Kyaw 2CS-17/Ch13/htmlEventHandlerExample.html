@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Event Handler Example</title>
+</head>
+<body>
+    <input type="button" value="Click Me" onclick="alert('Clicked')" />
+    <!-- 1st	alert('Clicked')	A popup that says "Clicked" -->
+        <input type="button" value="Click Me" onclick="showMessage()" />
+        <script type="text/javascript">
+            function showMessage(){
+                alert("Hello World!"); // 2nd	showMessage() (custom fn)	A popup that says "Hello World!"
+            }
+        </script>
+</body>
+</html>

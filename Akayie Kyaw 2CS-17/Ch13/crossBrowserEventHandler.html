@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Browser Event Handler Example</title>
+</head>
+
+<body>
+    <input type="button" id="myBtn" value="Click Me" />
+    <input type="button" id="myRemoveBtn" value="Remove Event Handler" />
+    <script type="text/javascript">
+
+        var btn = document.getElementById("myBtn");
+        var removeBtn = document.getElementById("myRemoveBtn");
+
+        var handler = function () {
+            alert("Clicked");
+        };
+
+        EventUtil.addHandler(btn, "click", handler);
+
+        EventUtil.addHandler(removeBtn, "click", function () {
+            EventUtil.removeHandler(btn, "click", handler);
+        });
+
+                // no ouput
+    </script>      
+</body>
+
+</html>
