@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <title>Image → 3D Avatar</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #222; color: white; font-family: sans-serif; }
+    #ui { position: absolute; top:10px; left:10px; z-index:10; }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <input type="file" id="imgInput" accept="image/*" /><br/>
+    <button id="spinBtn">Toggle Spin</button>
+  </div>
+  <canvas id="threeCanvas"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r144/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r144/examples/js/loaders/GLTFLoader.js"></script>
+
+  <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 100);
+    camera.position.set(0,1.6,3);
+
+    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('threeCanvas'), antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    window.addEventListener('resize', ()=> {
+      camera.aspect = window.innerWidth/window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // Lights
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 1.2));
+    const dir = new THREE.DirectionalLight(0xffffff, 0.8);
+    dir.position.set(5,10,7); scene.add(dir);
+
+    let avatar = new THREE.Group();
+    scene.add(avatar);
+
+    let mixer, clock = new THREE.Clock();
+    let spinning = false;
+
+    // Load GLTF head model
+    new THREE.GLTFLoader().load('head.glb', gltf => {
+      const model = gltf.scene;
+      model.traverse(m => m.castShadow = true);
+      avatar.add(model);
+
+      mixer = new THREE.AnimationMixer(avatar);
+      if (gltf.animations.length) {
+        mixer.clipAction(gltf.animations[0]).play();
+      }
+    });
+
+    // Handle user image upload -> apply as face texture
+    document.getElementById('imgInput').addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const url = URL.createObjectURL(file);
+      const tex = new THREE.TextureLoader().load(url, () => { URL.revokeObjectURL(url); });
+
+      avatar.traverse(o => {
+        if (o.isMesh && /Head|Face/i.test(o.name)) {
+          o.material = new THREE.MeshBasicMaterial({ map: tex });
+        }
+      });
+    });
+
+    document.getElementById('spinBtn').addEventListener('click', ()=> spinning = !spinning);
+
+    function animate(){
+      requestAnimationFrame(animate);
+      const dt = clock.getDelta();
+      if (mixer) mixer.update(dt);
+      if (spinning) avatar.rotation.y += dt * 0.5;
+      renderer.render(scene, camera);
+    }
+    animate();
+    
+  </script>
+</body>
+</html>

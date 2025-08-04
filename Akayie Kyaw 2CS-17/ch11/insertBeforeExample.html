@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before Example</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <script type="text/javascript">
+        // Create a new <p> element
+        var para = document.createElement("p");
+        
+        // Add some text to it
+        var node = document.createTextNode("This is new.");
+        para.appendChild(node);
+        
+        // Get the container and the reference child
+        var element = document.getElementById("div1");
+        var child = document.getElementById("p1");
+        
+        // Insert the new paragraph before the first paragraph
+        element.insertBefore(para, child);
+    </script>
+</body>
+</html>

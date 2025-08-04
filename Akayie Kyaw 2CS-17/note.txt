@@ -1,0 +1,97 @@
+const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const time = ["", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00"];
+const periodsPerDay = 6;
+const subjectLimit = 4;
+const fallbackLimit = 5;
+
+function getRandomSubject(subjects, subjectCount) {
+  const available = subjects.filter(sub => subjectCount[sub] < subjectLimit);
+  if (available.length === 0) return null;
+  return available[Math.floor(Math.random() * available.length)];
+}
+
+function generateTimetable() {
+  const subjectInput = document.getElementById("subjectsInput").value;
+  const subjects = subjectInput.split(",").map(s => s.trim()).filter(s => s);
+  if (subjects.length === 0) return alert("Please enter at least one subject.");
+
+  let subjectCount = {};
+  subjects.forEach(sub => subjectCount[sub] = 0);
+
+  let timetable = {};
+  days.forEach(day => timetable[day] = new Array(periodsPerDay).fill(""));
+
+  let fallbackToggle = true;
+  let fallbackCount = 0;
+
+  for (let day of days) {
+    for (let period = 0; period < periodsPerDay; period++) {
+      // Force library/selfStudy in Period 6
+      if (period === 5 && fallbackCount < fallbackLimit) {
+        timetable[day][period] = fallbackToggle ? "library" : "selfStudy";
+        fallbackToggle = !fallbackToggle;
+        fallbackCount++;
+        continue;
+      }
+
+      if (Math.random() < 0.1) {
+        if (fallbackCount < fallbackLimit) {
+          timetable[day][period] = fallbackToggle ? "library" : "selfStudy";
+          fallbackToggle = !fallbackToggle;
+          fallbackCount++;
+        }
+        continue;
+      }
+
+      const subject = getRandomSubject(subjects, subjectCount);
+      if (!subject) {
+        if (fallbackCount < fallbackLimit) {
+          timetable[day][period] = fallbackToggle ? "library" : "selfStudy";
+          fallbackToggle = !fallbackToggle;
+          fallbackCount++;
+        }
+        continue;
+      }
+
+      const allowDouble = Math.random() < 0.4;
+      timetable[day][period] = subject;
+      subjectCount[subject]++;
+
+      if (
+        allowDouble &&
+        period + 1 < periodsPerDay &&
+        timetable[day][period + 1] === "" &&
+        subjectCount[subject] < subjectLimit
+      ) {
+        timetable[day][period + 1] = subject;
+        subjectCount[subject]++;
+        period++;
+      }
+    }
+  }
+
+  displayTimetable(timetable);
+}
+
+function displayTimetable(data) {
+  const thead = document.querySelector("#timetable thead");
+  const tbody = document.querySelector("#timetable tbody");
+  thead.innerHTML = "";
+  tbody.innerHTML = "";
+
+  const headerRow = document.createElement("tr");
+  headerRow.innerHTML = "<th>Day</th>";
+  for (let i = 1; i <= periodsPerDay; i++) {
+    headerRow.innerHTML += `<th>${time[i]}</th>`;
+  }
+  thead.appendChild(headerRow);
+
+  for (let day of days) {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${day}</td>`;
+    data[day].forEach(cell => {
+      row.innerHTML += `<td>${cell || ""}</td>`;
+    });
+    tbody.appendChild(row);
+  }
+}
