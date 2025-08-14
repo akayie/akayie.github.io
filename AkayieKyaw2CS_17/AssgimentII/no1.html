@@ -1,0 +1,22 @@
+<!-- Write JavaScript code that creates an array with [1,2,3,4,5,4,3,2,1]. And then multiply every number in array by two and store those numbers into an array and display item. (Use array iterative method) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply Array Elements</title>
+</head>
+<body>
+    <p id="result-list"></p>
+
+    <script>
+        let originalArray = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+        let multipliedArray = originalArray.map(num => num * 2);
+
+        const resultList = document.getElementById("result-list");
+
+      alert("Multiplied Array: " + multipliedArray.join(", "));
+    </script>
+</body>
+</html>

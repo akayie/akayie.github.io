@@ -1,0 +1,24 @@
+<!-- Create a factorial function. Call it with value 5 and display the value of 5! -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial Calculator</title>
+  <script>
+    function factorial(n) {
+      if (n === 0 || n === 1) return 1;
+      return n * factorial(n - 1);
+    }
+
+    window.onload = function () {
+      let number = 5;
+      let result = factorial(number);
+
+      alert("Factorial of " + number + " is:"+ result);
+
+    };
+  </script>
+</head>
+<body>
+
+</body>
+</html>

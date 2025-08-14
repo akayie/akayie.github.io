@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Sheet (AM/PM x 25 Days)</title>
+  <style>
+    body { font-family: sans-serif; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 12px;
+    }
+    th, td {
+      border: 1px solid #888;
+      padding: 2px;
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 100%;
+      border: none;
+      background: none;
+      text-align: center;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+<button id="prevBtn">Previous Month</button>
+<span id="monthDisplay"></span>
+<button id="nextBtn">Next Month</button>
+<h2>အတန်း: 2CS  တစ်လလုံးတက်ရောက်မှုစာရင်း (AM/PM Sessions)  လ: August 2025</h2>
+<select id="weekSelector">
+  <option value="4">4 Weeks</option>
+  <option value="5" selected>5 Weeks</option>
+</select>
+
+<table border="1">
+  <thead>
+    <tr id="headerRow1">
+      <th rowspan="2">#</th>
+      <th rowspan="2">Roll No</th>
+      <th rowspan="2">Name</th>
+    </tr>
+    <tr id="headerRow2"></tr>
+  </thead>
+  <tbody id="studentBody"></tbody>
+</table>
+
+<button onclick="clearAllData()">Clear All Data</button>
+
+<script src="r1.js"></script>
+
+</body>
+</html>

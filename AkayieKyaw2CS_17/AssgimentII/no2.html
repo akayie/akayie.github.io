@@ -1,0 +1,28 @@
+<!-- Create a function named welcome_uni() that pops up alert saying, "Welcome to Our University!". Then execute this function every 10 seconds. Create another function that stops the endless calling welcome_uni() function. Create another function named welcomePage() that opens a new window with "http://www.ouruniversity.com" in topframe window. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University Welcome</title>
+  <script>
+function welcome_uni() {
+    alert("Welcome to Our University!");
+}
+
+let welcomeInterval = setInterval(welcome_uni, 10000);
+
+function stopWelcome() {
+    clearInterval(welcomeInterval);
+}
+
+function welcomePage() {
+    window.open("http://www.ouruniversity.com", "topframe");
+}
+
+  </script>
+</head>
+<body>
+  <h1>Welcome to my Site</h1>
+  <button onclick="stopWelcome()">Stop Welcome Alerts</button>
+  <button onclick="welcomePage()">Go to University Page</button>
+</body>
+</html>

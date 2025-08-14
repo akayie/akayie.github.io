@@ -1,0 +1,28 @@
+<!-- Create an object name Person with three properties (name, age, job) and a method named sayName(). This method returns the name of object with alert. Set the properties of object with "Nicholas", 29, "Software Engineer". Create an instance of object and call the method of objects. (Use Prototype Pattern) -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prototype Pattern Example 2</title>
+    <script type="text/javascript">
+       function Person (){
+       
+    };
+    
+       Person.prototype.name = "Nicholas";
+       Person.prototype.age = 29;
+       Person.prototype.job = "Software Engineer";
+       Person.prototype.sayName = function(){
+        alert (this.name);
+       };
+       var person1 = new Person();
+       person1.name = "Nicholas";
+       alert (person1.name);
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

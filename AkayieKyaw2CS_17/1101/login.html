@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Register App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 40px;
+      max-width: 500px;
+      margin: auto;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    p {
+      background-color: #eef;
+      padding: 10px;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function getStoredUser() {
+      const user = localStorage.getItem("user");
+      if (!user) return null;
+      try {
+        return JSON.parse(user);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function isLoggedIn() {
+      const user = getStoredUser();
+      return user && user.loggedIn === true;
+    }
+
+    function isRegistered() {
+      const user = getStoredUser();
+      return user && !!user.username;
+    }
+
+    function registerUser(username, role) {
+      const userData = {
+        username,
+        role,
+        registeredAt: Date.now(),
+        loggedIn: false
+      };
+      localStorage.setItem("user", JSON.stringify(userData));
+    }
+
+    function loginUser(username) {
+      const user = getStoredUser();
+      if (user && user.username === username) {
+        user.loggedIn = true;
+        localStorage.setItem("user", JSON.stringify(user));
+        return true;
+      }
+      return false;
+    }
+
+    function logout() {
+      const user = getStoredUser();
+      if (user) {
+        user.loggedIn = false;
+        localStorage.setItem("user", JSON.stringify(user));
+      }
+      routeUser();
+    }
+
+    function showRegistrationPage() {
+      document.body.innerHTML = `
+        <h2>Register</h2>
+        <input id="username" placeholder="Enter username" />
+        <select id="role">
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+        </select>
+        <button onclick="handleRegister()">Register</button>
+      `;
+    }
+
+    function handleRegister() {
+      const username = document.getElementById("username").value.trim();
+      const role = document.getElementById("role").value;
+      if (!username) {
+        alert("Please enter a username.");
+        return;
+      }
+      registerUser(username, role);
+      routeUser();
+    }
+
+    function showLoginPage() {
+      document.body.innerHTML = `
+        <h2>Login</h2>
+        <input id="loginUsername" placeholder="Enter username" />
+        <button onclick="handleLogin()">Login</button>
+      `;
+    }
+
+    function handleLogin() {
+      const username = document.getElementById("loginUsername").value.trim();
+      if (!username) {
+        alert("Please enter your username.");
+        return;
+      }
+      if (loginUser(username)) {
+        routeUser();
+      } else {
+        alert("Username not found. Please register first.");
+      }
+    }
+
+    function showUserPage(user) {
+      document.body.innerHTML = `
+        <h2>Welcome, ${user.username}</h2>
+        <p>Your role: ${user.role}</p>
+        <button onclick="logout()">Logout</button>
+      `;
+      if (user.role === "student") {
+        document.body.innerHTML += `<p>📚 Access your timetable and assignments.</p>`;
+      } else if (user.role === "teacher") {
+        document.body.innerHTML += `<p>🧑‍🏫 Manage your classes and schedules.</p>`;
+      }
+    }
+
+    function routeUser() {
+      if (!isRegistered()) {
+        showRegistrationPage();
+      } else if (!isLoggedIn()) {
+        showLoginPage();
+      } else {
+        const user = getStoredUser();
+        showUserPage(user);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", routeUser);
+  </script>
+</body>
+</html>
